@@ -1,5 +1,7 @@
 package com.innovoak.apps.activequest.model.user;
 
+import java.util.Objects;
+
 import com.innovoak.util.webhelpers.data.Model;
 
 // User class
@@ -13,6 +15,99 @@ public class User extends Model {
 	private String authID;
 	private String profileID;
 	private String statsID;
-//	private List<FoodServing> servings;
-//	keep user_id in FoodServing class
+
+	public User() {
+	}
+
+	public User(String email, String phone, String password, String authID, String profileID, String statsID) {
+		super();
+		this.email = email;
+		this.phone = phone;
+		this.password = password;
+		this.authID = authID;
+		this.profileID = profileID;
+		this.statsID = statsID;
+	}
+
+	public User(String id, String email, String phone, String password, String authID, String profileID,
+			String statsID) {
+		super(id);
+		this.email = email;
+		this.phone = phone;
+		this.password = password;
+		this.authID = authID;
+		this.profileID = profileID;
+		this.statsID = statsID;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getAuthID() {
+		return authID;
+	}
+
+	public void setAuthID(String authID) {
+		this.authID = authID;
+	}
+
+	public String getProfileID() {
+		return profileID;
+	}
+
+	public void setProfileID(String profileID) {
+		this.profileID = profileID;
+	}
+
+	public String getStatsID() {
+		return statsID;
+	}
+
+	public void setStatsID(String statsID) {
+		this.statsID = statsID;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(authID, email, password, phone, profileID, statsID);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Objects.equals(authID, other.authID) && Objects.equals(email, other.email)
+				&& Objects.equals(password, other.password) && Objects.equals(phone, other.phone)
+				&& Objects.equals(profileID, other.profileID) && Objects.equals(statsID, other.statsID);
+	}
+
 }
