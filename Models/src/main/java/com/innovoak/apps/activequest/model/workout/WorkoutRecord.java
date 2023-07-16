@@ -1,7 +1,6 @@
 package com.innovoak.apps.activequest.model.workout;
 
 import java.time.DayOfWeek;
-import java.util.Objects;
 
 public class WorkoutRecord extends Workout {
 	private static final long serialVersionUID = 1L;

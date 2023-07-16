@@ -15,13 +15,13 @@ public class Quest extends Achievable {
 	public Quest() {
 	}
 
-	public Quest(String name, String occurrence, String goalID, int trophyReward) {
-		super(name, occurrence, goalID);
+	public Quest(String name, String occurrence, String goalID, String type, int trophyReward) {
+		super(name, occurrence, goalID, type);
 		this.trophyReward = trophyReward;
 	}
 
-	public Quest(String id, String name, int trophyReward, String occurrence, String goalID) {
-		super(id, name, occurrence, goalID);
+	public Quest(String id, String name, String occurrence, String goalID, String type, int trophyReward) {
+		super(id, name, occurrence, goalID, type);
 		this.trophyReward = trophyReward;
 	}
 
