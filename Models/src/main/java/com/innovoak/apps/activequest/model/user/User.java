@@ -3,6 +3,7 @@ package com.innovoak.apps.activequest.model.user;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
 
 // User class
 public class User extends Model {
@@ -64,6 +65,7 @@ public class User extends Model {
 		this.password = password;
 	}
 
+	@Column(columnName = "auth_id")
 	public String getAuthID() {
 		return authID;
 	}
@@ -72,6 +74,7 @@ public class User extends Model {
 		this.authID = authID;
 	}
 
+	@Column(columnName = "profile_id")
 	public String getProfileID() {
 		return profileID;
 	}
@@ -80,6 +83,7 @@ public class User extends Model {
 		this.profileID = profileID;
 	}
 
+	@Column(columnName = "stats_id")
 	public String getStatsID() {
 		return statsID;
 	}
