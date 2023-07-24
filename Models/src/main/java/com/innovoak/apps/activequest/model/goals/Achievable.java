@@ -1,11 +1,11 @@
 package com.innovoak.apps.activequest.model.goals;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
 import com.innovoak.util.webhelpers.data.annotations.Column;
 
-// REFACTOR
 public abstract class Achievable extends Model {
 	private static final long serialVersionUID = 1L;
 

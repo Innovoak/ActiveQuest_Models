@@ -1,9 +1,13 @@
 package com.innovoak.apps.activequest.model.avatar;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
+@Table(name = "avatar_top")
 public class AvatarTop extends Model {
 
 	private static final long serialVersionUID = 1L;
@@ -39,26 +43,33 @@ public class AvatarTop extends Model {
 		this.shirtImage = shirtImage;
 	}
 
+
+	@Column(columnName = "accessories_face")
 	public String getAccessoriesFace() {
 		return accessoriesFace;
 	}
 
+	@Column(columnName = "accessories_ear")
 	public String getAccessoriesEar() {
 		return accessoriesEar;
 	}
 
+	@Column(columnName = "accessories_neck")
 	public String getAccessoriesNeck() {
 		return accessoriesNeck;
 	}
 
+	@Column(columnName = "accessories_head")
 	public String getAccessoriesHead() {
 		return accessoriesHead;
 	}
 
+	@Column(columnName = "accessories_eyes")
 	public String getAccessoriesEyes() {
 		return accessoriesEyes;
 	}
 
+	@Column(columnName = "shirt_image")
 	public String getShirtImage() {
 		return shirtImage;
 	}

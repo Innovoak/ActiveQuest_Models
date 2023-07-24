@@ -1,10 +1,14 @@
 package com.innovoak.apps.activequest.model.food;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // model for food stats
+@Table(name = "food_stats")
 public class FoodStats extends Model {
 	private static final long serialVersionUID = 1L;
 	// fields
@@ -35,6 +39,7 @@ public class FoodStats extends Model {
 	}
 
 	// getters and setters
+	@Column(columnName = "cals_per_unit", type = JDBCType.DOUBLE)
 	public double getCalsPerUnit() {
 		return calsPerUnit;
 	}
@@ -43,6 +48,7 @@ public class FoodStats extends Model {
 		this.calsPerUnit = calsPerUnit;
 	}
 
+	@Column(columnName = "carbs_per_unit", type = JDBCType.DOUBLE)
 	public double getCarbsPerUnit() {
 		return carbsPerUnit;
 	}
@@ -51,6 +57,7 @@ public class FoodStats extends Model {
 		this.carbsPerUnit = carbsPerUnit;
 	}
 
+	@Column(columnName = "protein_per_unit", type = JDBCType.DOUBLE)
 	public double getProteinPerUnit() {
 		return proteinPerUnit;
 	}
@@ -59,6 +66,7 @@ public class FoodStats extends Model {
 		this.proteinPerUnit = proteinPerUnit;
 	}
 
+	@Column(columnName = "fat_per_unit", type = JDBCType.DOUBLE)
 	public double getFatPerUnit() {
 		return fatPerUnit;
 	}

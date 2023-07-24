@@ -1,9 +1,13 @@
 package com.innovoak.apps.activequest.model.avatar;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
+@Table(name = "avatar_face")
 public class AvatarFace extends Model {
 	private static final long serialVersionUID = 1L;
 	private String faceColor;
@@ -59,51 +63,63 @@ public class AvatarFace extends Model {
 		this.lipShape = lipShape;
 		this.earShape = earShape;
 	}
-
+	
+	@Column(columnName = "face_color")
 	public String getFaceColor() {
 		return faceColor;
 	}
 
+	@Column(columnName = "face_shape")
 	public String getFaceShape() {
 		return faceShape;
 	}
 
+	@Column(columnName = "eye_color")
 	public String getEyeColor() {
 		return eyeColor;
 	}
 
+	@Column(columnName = "eye_shape")
 	public String getEyeShape() {
 		return eyeShape;
 	}
 
+	@Column(columnName = "nose_shape")
 	public String getNoseShape() {
 		return noseShape;
 	}
 
+	@Column(columnName = "facial_hair_color")
 	public String getFacialHairColor() {
 		return facialHairColor;
 	}
 
+	@Column(columnName = "facial_hair_shape")
 	public String getFacialHairShape() {
 		return facialHairShape;
 	}
 
+	@Column(columnName = "hair_color")
 	public String getHairColor() {
 		return hairColor;
 	}
 
+	@Column(columnName = "hair_shape")
 	public String getHairShape() {
 		return hairShape;
 	}
 
+	@Column(columnName = "lip_color")
 	public String getLipColor() {
 		return lipColor;
 	}
 
+	@Column(columnName = "lip_shape")
 	public String getLipShape() {
 		return lipShape;
 	}
 
+	@Column(columnName = "ear_shape")
 	public String getEarShape() {
 		return earShape;
 	}
@@ -128,7 +144,7 @@ public class AvatarFace extends Model {
 		this.noseShape = noseShape;
 	}
 
-	public void setFacialHairColour(String facialHairColor) {
+	public void setFacialHairColor(String facialHairColor) {
 		this.facialHairColor = facialHairColor;
 	}
 

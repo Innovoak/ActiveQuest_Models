@@ -1,8 +1,13 @@
 package com.innovoak.apps.activequest.model.goals;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
+
 // Goal Model
+@Table(name = "goals")
 public class Goal extends Achievable {
 	private static final long serialVersionUID = 1L;
 
@@ -38,6 +43,7 @@ public class Goal extends Achievable {
 		this.favourite = favourite;
 	}
 
+	@Column(columnName = "completed", type = JDBCType.TINYINT)
 	public boolean isComplete() {
 		return isComplete;
 	}
@@ -46,6 +52,7 @@ public class Goal extends Achievable {
 		this.isComplete = isComplete;
 	}
 
+	@Column(columnName = "user_id")
 	public String getUserID() {
 		return userID;
 	}

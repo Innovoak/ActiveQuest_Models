@@ -1,10 +1,14 @@
 package com.innovoak.apps.activequest.model.user;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // Authentication class
+@Table(name = "auth")
 public class Authentication extends Model {
 	private static final long serialVersionUID = 1L;
 	// Fields
@@ -29,6 +33,7 @@ public class Authentication extends Model {
 	}
 
 	// Getters and Setters
+	@Column(columnName = "auth_type")
 	public String getAuthenticationType() {
 		return authenticationType;
 	}

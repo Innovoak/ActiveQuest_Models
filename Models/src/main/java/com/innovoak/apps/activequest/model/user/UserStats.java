@@ -1,10 +1,14 @@
 package com.innovoak.apps.activequest.model.user;
 
+import java.sql.JDBCType;
 import java.time.Instant;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
+@Table(name = "user_stats")
 public class UserStats extends Model {
 	private static final long serialVersionUID = 1L;
 	private int trophies;
@@ -55,6 +59,7 @@ public class UserStats extends Model {
 		this.weight = weight;
 	}
 
+	@Column(columnName = "creation_time", type = JDBCType.TIMESTAMP)
 	public Instant getCreationTime() {
 		return creationTime;
 	}

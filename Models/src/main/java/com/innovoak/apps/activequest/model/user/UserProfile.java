@@ -1,10 +1,14 @@
 package com.innovoak.apps.activequest.model.user;
 
+import java.sql.JDBCType;
 import java.time.LocalDate;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
+@Table(name = "user_profiles")
 public class UserProfile extends Model {
 	private static final long serialVersionUID = 1L;
 	private String name;
@@ -66,6 +70,7 @@ public class UserProfile extends Model {
 		this.language = language;
 	}
 
+	@Column(columnName = "dob", type = JDBCType.DATE)
 	public LocalDate getDob() {
 		return dob;
 	}
@@ -74,6 +79,7 @@ public class UserProfile extends Model {
 		this.dob = dob;
 	}
 
+	@Column(columnName = "units_of_measure")
 	public String getUnitsofMeasure() {
 		return unitsofMeasure;
 	}
@@ -90,6 +96,7 @@ public class UserProfile extends Model {
 		this.bio = bio;
 	}
 
+	@Column(columnName = "avatar_id")
 	public String getAvatarID() {
 		return avatarID;
 	}

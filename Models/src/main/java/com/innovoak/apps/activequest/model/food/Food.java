@@ -1,11 +1,14 @@
 package com.innovoak.apps.activequest.model.food;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
 import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // model for food
+@Table(name = "food")
 public class Food extends Model {
 	private static final long serialVersionUID = 1L;
 	// fields
@@ -38,7 +41,7 @@ public class Food extends Model {
 		this.name = name;
 	}
 
-	@Column(columnName = "foodstats_id")
+	@Column(columnName = "foodstats_id", unique = true)
 	public String getFoodStatsID() {
 		return foodStatsID;
 	}

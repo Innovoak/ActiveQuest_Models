@@ -1,4 +1,4 @@
-package com.innovoak.apps.activequest.model.misc;
+package com.innovoak.apps.activequest.model.goals;
 
 import java.sql.JDBCType;
 import java.util.Objects;
@@ -7,26 +7,27 @@ import com.innovoak.util.webhelpers.data.Model;
 import com.innovoak.util.webhelpers.data.annotations.Column;
 import com.innovoak.util.webhelpers.data.annotations.Table;
 
-@Table(name = "groupchat_members")
-public class GroupChatMember extends Model {
+@Table(name = "completed_quests")
+public class CompletedQuest extends Model {
 	private static final long serialVersionUID = 1L;
 
 	private String userID;
-	private String groupChatID;
+	private String questID;
 
-	public GroupChatMember() {
+	public CompletedQuest() {
+		super();
 	}
 
-	public GroupChatMember(String userID, String groupChatID) {
+	public CompletedQuest(String userID, String questID) {
 		super();
 		this.userID = userID;
-		this.groupChatID = groupChatID;
+		this.questID = questID;
 	}
 
-	public GroupChatMember(String id, String userID, String groupChatID) {
+	public CompletedQuest(String id, String userID, String questID) {
 		super(id);
 		this.userID = userID;
-		this.groupChatID = groupChatID;
+		this.questID = questID;
 	}
 
 	@Column(columnName = "user_id")
@@ -38,20 +39,20 @@ public class GroupChatMember extends Model {
 		this.userID = userID;
 	}
 
-	@Column(columnName = "groupchat_id")
-	public String getGroupChatID() {
-		return groupChatID;
+	@Column(columnName = "quest_id")
+	public String getQuestID() {
+		return questID;
 	}
 
-	public void setGroupChatID(String groupChatID) {
-		this.groupChatID = groupChatID;
+	public void setQuestID(String questID) {
+		this.questID = questID;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Objects.hash(groupChatID, userID);
+		result = prime * result + Objects.hash(questID, userID);
 		return result;
 	}
 
@@ -63,8 +64,8 @@ public class GroupChatMember extends Model {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		GroupChatMember other = (GroupChatMember) obj;
-		return Objects.equals(groupChatID, other.groupChatID) && Objects.equals(userID, other.userID);
+		CompletedQuest other = (CompletedQuest) obj;
+		return Objects.equals(questID, other.questID) && Objects.equals(userID, other.userID);
 	}
 
 }

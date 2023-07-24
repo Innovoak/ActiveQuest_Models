@@ -1,7 +1,12 @@
 package com.innovoak.apps.activequest.model.workout;
 
+import java.sql.JDBCType;
 import java.time.DayOfWeek;
 
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
+
+@Table(name = "workout_records")
 public class WorkoutRecord extends Workout {
 	private static final long serialVersionUID = 1L;
 	private DayOfWeek dayOfWeek;
@@ -34,6 +39,7 @@ public class WorkoutRecord extends Workout {
 		this.numberOfCompletion = numberOfCompletion;
 	}
 
+	@Column(columnName = "day_of_week")
 	public DayOfWeek getDayOfWeek() {
 		return dayOfWeek;
 	}
@@ -42,6 +48,7 @@ public class WorkoutRecord extends Workout {
 		this.dayOfWeek = dayOfWeek;
 	}
 
+	@Column(columnName = "set_id")
 	public String getSetID() {
 		return setID;
 	}
@@ -50,6 +57,7 @@ public class WorkoutRecord extends Workout {
 		this.setID = setID;
 	}
 
+	@Column(columnName = "routine_id")
 	public String getRoutineID() {
 		return routineID;
 	}
@@ -58,6 +66,7 @@ public class WorkoutRecord extends Workout {
 		this.routineID = routineID;
 	}
 
+	@Column(columnName = "user_id")
 	public String getUserID() {
 		return userID;
 	}
@@ -66,6 +75,7 @@ public class WorkoutRecord extends Workout {
 		this.userID = userID;
 	}
 
+	@Column(columnName = "num_of_completions", type = JDBCType.INTEGER)
 	public int getNumberOfCompletion() {
 		return numberOfCompletion;
 	}

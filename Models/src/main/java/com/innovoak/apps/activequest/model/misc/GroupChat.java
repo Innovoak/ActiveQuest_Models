@@ -3,8 +3,10 @@ package com.innovoak.apps.activequest.model.misc;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // Group Chat class
+@Table(name = "groupchats")
 public class GroupChat extends Model {
 	private static final long serialVersionUID = 1L;
 

@@ -1,10 +1,14 @@
 package com.innovoak.apps.activequest.model.goals;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.apps.activequest.model.workout.WorkoutSet;
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // Quest Model
+@Table(name = "quests")
 public class Quest extends Achievable {
 	private static final long serialVersionUID = 1L;
 
@@ -26,6 +30,7 @@ public class Quest extends Achievable {
 	}
 
 	// Getters and Setters
+	@Column(columnName = "trophy_reward", type = JDBCType.INTEGER)
 	public int getTrophyReward() {
 		return trophyReward;
 	}

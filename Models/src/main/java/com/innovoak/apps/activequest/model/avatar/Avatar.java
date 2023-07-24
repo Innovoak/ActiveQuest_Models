@@ -1,10 +1,13 @@
 package com.innovoak.apps.activequest.model.avatar;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
 import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
+@Table(name = "avatar")
 public class Avatar extends Model {
 	private static final long serialVersionUID = 1L;
 
@@ -30,7 +33,7 @@ public class Avatar extends Model {
 		this.avatarFaceId = avatarFaceId;
 	}
 
-	@Column(columnName = "avatar_top_id")
+	@Column(columnName = "avatar_top_id", unique = true)
 	public String getAvatarTopId() {
 		return avatarTopId;
 	}
@@ -39,7 +42,7 @@ public class Avatar extends Model {
 		this.avatarTopId = avatarTopId;
 	}
 
-	@Column(columnName = "avatar_bottom_id")
+	@Column(columnName = "avatar_bottom_id", unique = true)
 	public String getAvatarBottomId() {
 		return avatarBottomId;
 	}
@@ -48,7 +51,7 @@ public class Avatar extends Model {
 		this.avatarBottomId = avatarBottomId;
 	}
 
-	@Column(columnName = "avatar_face_id")
+	@Column(columnName = "avatar_face_id", unique = true)
 	public String getAvatarFaceId() {
 		return avatarFaceId;
 	}

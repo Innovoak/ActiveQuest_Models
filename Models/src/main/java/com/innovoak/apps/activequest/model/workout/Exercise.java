@@ -1,7 +1,12 @@
 package com.innovoak.apps.activequest.model.workout;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
+
+@Table(name = "exercises")
 public class Exercise extends Workout {
 	private static final long serialVersionUID = 1L;
 
@@ -32,6 +37,7 @@ public class Exercise extends Workout {
 		this.instruction = instruction;
 	}
 
+	@Column(columnName = "reps", type = JDBCType.INTEGER)
 	public int getRecommendedReps() {
 		return recommendedReps;
 	}

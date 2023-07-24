@@ -1,7 +1,12 @@
 package com.innovoak.apps.activequest.model.workout;
 
+import java.sql.JDBCType;
 import java.util.Objects;
 
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
+
+@Table(name = "routines")
 public class Routine extends Workout {
 	private static final long serialVersionUID = 1L;
 
@@ -20,6 +25,7 @@ public class Routine extends Workout {
 		this.userID = userID;
 	}
 
+	@Column(columnName = "user_id")
 	public String getUserID() {
 		return userID;
 	}

@@ -1,12 +1,15 @@
 package com.innovoak.apps.activequest.model.food;
 
+import java.sql.JDBCType;
 import java.time.LocalDate;
 import java.util.Objects;
 
 import com.innovoak.util.webhelpers.data.Model;
 import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
 
 // model class for food serving
+@Table(name = "food_serving")
 public class FoodServing extends Model {
 	private static final long serialVersionUID = 1L;
 	// fields
@@ -46,6 +49,7 @@ public class FoodServing extends Model {
 		this.favourite = favourite;
 	}
 
+	@Column(columnName = "serving_size", type = JDBCType.FLOAT)
 	public float getServingSize() {
 		return servingSize;
 	}
@@ -54,6 +58,7 @@ public class FoodServing extends Model {
 		this.servingSize = servingSize;
 	}
 
+	@Column(columnName = "number", type = JDBCType.FLOAT)
 	public float getNumber() {
 		return number;
 	}
@@ -70,6 +75,7 @@ public class FoodServing extends Model {
 		this.meal = meal;
 	}
 
+	@Column(columnName = "date", type = JDBCType.DATE)
 	public LocalDate getDate() {
 		return date;
 	}

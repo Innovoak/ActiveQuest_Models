@@ -2,6 +2,10 @@ package com.innovoak.apps.activequest.model.workout;
 
 import java.util.Objects;
 
+import com.innovoak.util.webhelpers.data.annotations.Column;
+import com.innovoak.util.webhelpers.data.annotations.Table;
+
+@Table(name = "workout_sets")
 public class WorkoutSet extends Workout {
 	private static final long serialVersionUID = 1L;
 
@@ -65,6 +69,7 @@ public class WorkoutSet extends Workout {
 		this.calories = calories;
 	}
 
+	@Column(columnName = "exercise_id")
 	public String getExerciseID() {
 		return exerciseID;
 	}
